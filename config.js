@@ -13,7 +13,7 @@ let dbConfig={
         connection: {
             host : 'localhost',
             user : 'postgres',
-            password : 'tiger',
+            password : '123abhaysahu321',
             database : 'baby'
             }
         

@@ -18,7 +18,7 @@ vaccinationRoute.get('/:id', function(req, res) {
    
 
 
-    knex.raw(`select * from vaccinations_user vu,vaccinations_ideal vi where vu.vaccination_id=vi.vaccination_id and vu.uuid='${req.params.id}';`).then(data=>{
+    knex.raw(`select * from vaccinations_user vu,vaccinations_ideal vi where vu.vaccination_id=vi.vaccination_id and vu.uuid='${req.params.id} order by vi.vaccination_id';`).then(data=>{
         res.json(data.rows)
     })
    
